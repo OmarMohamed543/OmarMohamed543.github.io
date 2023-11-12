@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  word-spacing: 0px;
+
+}
+
+body, p, h1, h2, h3, a {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+  
+.project-details {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.project-header {
+    text-align: center;
+    position: relative;
+}
+  
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+    text-decoration: none;
+    color: #333;
+}
+
+.close-button:hover {
+    transform: scale(1.5);
+}
+  
+.project-title {
+    font-size: 24px;
+    margin-top: 10px;
+}
+  
+.project-type {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #888;
+}
+  
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+ 
+/* Technicalities */
+.technicalities {
+    text-align: center;
+    padding: 20px;
+}
+
+.language-used, .program-used {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.subheading {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.icon-container {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+}
+
+.icon-container .custom-icon {
+    display: inline-block;
+    width: 24px; /* Adjust the width of custom icons */
+    height: 24px; /* Adjust the height of custom icons */
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+}
+
+.icon-name {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    top: -30px;
+    left: -10px;
+    white-space: nowrap;
+}
+
+.icon-container:hover .icon-name {
+    display: block;
+}
+
+/* Project Description Paragraph */
+.project-description {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+  
+.project-paragraph {
+    margin-bottom: 20px;
+}
+  
+.project-images-wrapper {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    gap: 10px;
+}
+  
+.project-image-item {
+    width: 50%;
+    text-align: center;
+ }
+  
+.project-image {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.project-image-item:hover {
+    transform: scale(2);
+}
+  
+  /* Add more styles for the project description here */
+  
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+  
+.redirect-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.redirect-button a {
+    color: #fff;
+    text-decoration: none;
+}

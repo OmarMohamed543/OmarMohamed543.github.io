@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0");
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --background: linear-gradient(#09002f, #501cac, #b796fd);
+  --background-color: #09002f80;
+  --accordian: #4e2a79;
+  --primary-color: #fff;
+  --secondary-color: #35215e;
+  --box-shadow: #ffffff;
+  --linear-gradient: #35215e;
+  --linear-gradient1: #351257;
+  --bars: #ffffff49;
+  --form: #7a4ecd;
+  --icons: #8503ff50;
+  --about-tabs: #00B9FF;
+}
+.lightMode{
+  --background: linear-gradient(#7797fa, #ffffb3, #ffffb3);
+  --background-color: #7797fa80;
+  --accordian: #ffbb65;
+  --primary-color: #000000;
+  --secondary-color: #ff9c4b;
+  --box-shadow: #000;
+  --linear-gradient: #ff9c4a;
+  --linear-gradient1: #ffab6c;
+  --bars: #fffd7c5e;
+  --form: #ffffb3;
+  --icons: #0379ff44;
+  --about-tabs: #FF0000;
+}
+
+/* Loading Screen */
+#loading-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #09002f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s; 
+}
+
+#loading-animation h1 {
+  font-family: 'Press Start 2P', monospace ;
+	font-size: 150px;
+  font-weight: lighter;
+  color: white;
+}
+
+#running-camel {
+  width: 200px; /* Adjust the size as needed */
+}
+
+#enter-button {
+  font-family: 'Press Start 2P', monospace ;
+	font-size: 24px;
+  background: white;
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 2ch;
+	width: 100%;
+  background: #7C7C7C;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.2rem;
+	margin: 1rem;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: auto;
+}
+
+#enter-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Toggle button */
+.toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 50%;
+  margin-left: 20px;
+  border: none;
+  padding: 5px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon:last-child{
+  display: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body
+{
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--background); 
+}
+
+header
+{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  background-color: var(--background-color);
+  backdrop-filter: blur(3px);
+}
+
+header .logo
+{
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+header ul li
+{
+  list-style: none;
+}
+
+header ul li a
+{
+  text-decoration: none;
+  padding: 6px 15px;
+  color: var(--primary-color);
+  border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a:active
+{
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* Light Switch */
+.toggle-button {
+  outline: none;
+}
+
+/* Images and Blend Section before About Section */
+
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section::before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top,var(--linear-gradient),var(--linear-gradient1),transparent);
+  z-index: 1000;
+} 
+
+section img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+section img#moon
+{
+  mix-blend-mode: screen;
+}
+
+section img#pyramids_front_dark
+{
+  z-index: 10;
+
+}
+
+#text
+{
+  position: absolute;
+  color: var(--primary-color);
+  white-space: nowrap;
+  font-size: 60pt;
+  z-index: 9;
+  align-items: center;
+}
+
+#btn
+{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: var(--primary-color);
+  color:var(--secondary-color);
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 25px;
+  width: 100%;
+  text-align: Center;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 3rem;
+}
+
+/* Style the accordion panel */
+.panel {
+  background-color: var(--accordian);
+  display: none;
+  overflow: visible;
+  color: var(--primary-color);
+}
+
+/* Background color of the button when it is clicked on */
+.active, .accordion:hover {
+  background-color: var(--background);
+  color: var(--primary-color);
+}
+
+/* About Section */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+/*About Animated Title*/
+.animated-text{
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+  padding-bottom: 10px;
+}
+
+.animated-text span{
+  position: relative;
+  font-weight: 600;
+}
+
+.animated-text span::before{
+  content: "Developer";
+  color: var(--form);
+  animation: words 20s infinite;
+}
+
+.animated-text span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  background-color: var(--form);
+  border-left: 2px solid var(--accordian);
+  right: -8px;
+  animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to{
+      border-left: 2px solid #ff7f5000;
+  }
+}
+
+@keyframes words {
+  0%,20%{
+      content: "Developer";
+  }
+  21%,40%{
+      content: "Researcher";
+  }
+  41%,60%{
+      content: "Designer";
+  }
+  61%,80%{
+      content: "Innovator";
+  }
+  81%,100%{
+      content: "Gamer";
+  }
+}
+
+@keyframes typing {
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+}
+
+/* About Description */
+.about-description { 
+  padding: 30px;
+  color: var(--primary-color);
+  font-size: 15pt;
+  line-height: 215%;
+  grid-column: 1 / 2;
+}
+
+.about-portrait {
+  align-items: center;
+  scale: 100%;
+  margin-top: 20px;
+  grid-column: 2 / 3;
+  text-align: center;
+}
+
+.circular--portrait { 
+  position: relative; 
+  width: 550px; 
+  height: 550px; 
+  overflow: hidden; 
+  border-radius: 50%;
+  background-color: var(--secondary-color); 
+} 
+  
+.circular--portrait img { 
+  width: 100%; 
+  height: auto;
+}
+
+/* About Section Tabs */
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: var(--about-tabs);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+.tab-contents {
+  display: none; 
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: var(--about-tabs);
+  font-size: 16px;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* Styles for Project Section */
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: visible;
+  position: relative;
+  padding: 40px;
+  transition: transform 0.2s;
+}
+
+.card {
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s;
+}
+
+.card-button {
+  width: 300px;
+  height: 650px;
+  border-radius: 325px;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  border: transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.card-button:hover {
+  background-color: rgba(0, 123, 255, 0.5);
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 325px;
+  position: relative;
+  border: transparent;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 325px;
+}
+
+.card-title {
+  font-size: 18pt;
+  color: black;
+  position: absolute;
+  font-weight: bold;
+  top: 85%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 1; 
+}
+
+/* Styles for Hobbies Section */
+
+
+/* Game Logos */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+h3{
+  font-size: 20pt;
+}
+.logos {
+  overflow: hidden;
+  padding: 20px 0;
+  background: var(--bars);
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, --background, --background-color);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, --background, --background-color);
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 80px;
+  margin: 0 40px;
+  scale: 120%;
+}
+
+
+/* Style the contact section */
+.contact-section {
+  font-family: 'Poppins', sans-serif;
+  padding: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-form {
+  flex: 1;
+  width: 50%;
+  color: var(--primary-color);
+}
+
+.contact-info {
+  justify-content: center;
+  width: 50%;
+  color: var(--primary-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.contact-info h1 {
+  font-size: 30pt;
+}
+
+.resume button {
+  background-color: var(--background-color);
+  padding: 20px;
+  width: 30%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resume button:hover {
+  background-color: var(--linear-gradient1);
+}
+
+.resume button:focus {
+  background-color: var(--linear-gradient);
+}
+
+.resume a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.email-section {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.email a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Style the contact form inputs and buttons */
+.contact-form label,
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  width: 100%;
+  border-radius: 5px;
+  padding: 1px;
+  border: none;
+}
+
+.contact-form ::placeholder {
+  color: var(--primary-color);
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--form);
+  border-color: var(--form);
+  padding: 15px;
+}
+
+.contact-form button {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 25%;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: var(--linear-gradient1);
+}
+
+.contact-form button:focus {
+  background-color: var(--linear-gradient);
+}
+
+/* Social Icons */
+.social-icons {
+  font-size: 15pt;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.social-icons a {
+  color: var(--primary-color);
+  padding-right: 20px;
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 40px;
+  width: 100%;
+  text-align: Center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10pt;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+}

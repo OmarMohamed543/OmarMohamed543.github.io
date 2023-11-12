@@ -1,0 +1,249 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omar Mohamed's Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="path/to/lightbox.min.css" rel="stylesheet">
+</head>
+<body>
+  
+<!-- Loading animation -->
+  <div id="loading-animation">
+    <h1>READY?</h1>
+    <br>
+    <img src="logos\camel.gif" alt="Running Camel" id="running-camel">
+    <br>
+    <button id="enter-button">Enter</button>
+  </div>
+
+<!-- Navigation Bar -->
+  <header style="display: none;">
+    <nav>
+      <ul>
+        <li><a href="#" class="logo">OM</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Hobbies">Hobbies</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+
+<!-- Light/Dark Mode Switch -->
+      <button class="toggle-button" id="toggleButton">
+        <img class="icon" id="lightIcon" src="images/light.png">
+        <img class="icon" id="darkIcon" src="images/dark.png">
+      </button>
+    </div>
+  </header>
+
+<!-- Parallax Background -->
+  <section>
+    <img src="images/stars.png" id="stars" class="preload-image">
+    <img src="images/moon.png" id="moon" class="preload-image">
+    <img src="images/pyramids_back_dark.png" id="pyramids_back_dark" class="preload-image">
+    <h2 id="text">Omar's Portfolio</h2>
+    <a href="#About" id="btn">Explore</a>
+    <img src="images/pyramids_front_dark.png" id="pyramids_front_dark" class="preload-image">
+  </section>
+
+<!-- About Section -->
+  <button id="About" class="accordion">About</button>
+  <div class="panel">
+    <div class="grid-container">
+      <div class="about-description">
+        <!-- Animated Heading Text -->
+        <div class="animated-text">
+        I'm a <span></span>
+        </div>
+        <p>I'm Omar Mohamed—an Egyptian-American, computer scientist with a background in full-stack developement and software developement. My passion for technology drives me to create innovative solutions that bridge the gap between cutting-edge tech and user-friendly experiences. I also bring a unique blend of psychology and UX design to the table, aiming to enhance software and technology across various sectors.</p>
+        <p>Years of hands-on experience have honed my skills in both front-end and back-end development, allowing me to craft seamless, end-to-end digital solutions. As I look ahead, I'm excited to continue my journey in software development, pushing the boundaries of knowledge through research initiatives and exploring new technological avenues. My ultimate goal is to leave a lasting mark by crafting software that not only functions seamlessly but deeply resonates with users, making their lives better in a rapidly evolving digital landscape.</p>
+        <!-- Experience Tabs -->
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+          <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Front-end</span><br>CSS • Git • HTML • JavaScript • Pug • React.js</li>
+            <li><span>Back-end</span><br>C++ • Docker • Python • SQL</li>
+            <li><span>UX/UI</span><br>Adobe XD • Figma • Prototyping • Usability Testing • Wire-framing</li>
+            <li><span>Programs</span><br>Adobe Illustrator • Google Workspace • Microsoft Office • Notepad++ • Visual Studio Code</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>May 2022 to Jun 2023</span><br>Academic STEM tutor @ Ally Learning</li>
+            <li><span>Jul 2021 to Sep 2021</span><br>Vehicle Test Engineer @ Roush Performance</li>
+            <li><span> </span> <br> </li>
+            <li><span> </span> <br> </li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>University of Michigan (2025)</span><br>Bachelor of Science in Computer Engineering; concentration in computer science</li>
+            <li><span>Wayne State University (2020)</span><br>Bachelor of Science in Psychology; minor in user experience (UX)</li>
+            <li><span></span><br></li>
+            <li><span></span><br></li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="certifications">
+          <ul>
+            <li><span>Google (2023)</span><br>UX Design Professional</li>
+            <li><span>Google (2022)</span><br>Foundations in Data Analytics</li>
+            <li><span>Queen Mary University of London (2022)</span><br>Foundations in Marketing Research</li>
+            <li><span></span><br></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Portrait Image -->
+      <div class="about-portrait">
+        <div class="circular--portrait">
+          <img src="images\portrait_image.png" alt="Omar Mohamed Portrait">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Projects -->
+  <button id="Projects" class="accordion">Projects</button>
+  <div class="panel">
+    <div class="carousel">
+        <div class="card">
+          <a href="projects\portfolio\portfolio-website.html">
+            <button class="card-button">
+                <div class="image-container">
+                    <img src="project-image\portfolio.gif" alt="Image Description">
+                </div>
+                <div class="card-title">Personal Portfolio Website</div>
+            </button>
+          </a>
+        </div>
+        <div class="card">
+          <a href="projects\inkuiry\inkuiry.html">
+            <button class="card-button">
+                <div class="image-container">
+                    <img src="project-image\lorcana.gif" alt="Card Search">
+                </div>
+                <div class="card-title">Inkuiry</div>
+            </button>
+          </a>  
+        </div>
+        <div class="card">
+          <button class="card-button">
+              <div class="image-container">
+                  <img src="project-image\cart.gif" alt="Grocery App">
+              </div>
+              <div class="card-title">Healthy Cart</div>
+          </button>
+        </div>
+        <div class="card">
+          <button class="card-button">
+              <div class="image-container">
+                  <img src="project-image\calculator.gif" alt="calculator">
+              </div>
+              <div class="card-title">Calculator</div>
+          </button>
+        </div>
+        <div class="card">
+          <button class="card-button">
+              <div class="image-container">
+                  <img src="project-image/grocery.gif" alt="Image Description">
+              </div>
+              <div class="card-title">Grocery Store Sales</div>
+          </button>
+        </div>
+        <!-- Add More Projects Here -->
+    </div>
+  </div>
+
+<!-- Hobbies -->
+  <button id="Hobbies" class="accordion">Hobbies</button>
+  <div class="panel">
+    <div class="grid-container">
+      <div class="about-description">
+        <div class="animated-text">
+        I'm a <span></span>
+      </div>
+        <p>&nbsp;&nbsp;Hey, my name is Omar Mohamed. I'm an Egyptian-American, full-stack developer and a dedicated UX designer. With a strong passion for technology, I have immersed myself in the world of software development, constantly striving to create innovative solutions that bridge the gap between cutting-edge technology and user-friendly experiences. Through years of hands-on experience and an insatiable curiosity, I have honed my skills in both front-end and back-end development, allowing me to craft seamless, end-to-end digital solutions.<br><br>&nbsp;&nbsp;As I look ahead, I am excited to continue my journey in software development, where I see endless opportunities to make a positive impact. I am committed to pushing the boundaries of knowledge through research initiatives, exploring new avenues in technology that can shape the future of software development. My mission is to create software that not only functions flawlessly but also adds genuine value to the lives of its users.<br><br>&nbsp;&nbsp;Outside of my professional pursuits, I maintain an active lifestyle that fuels my competitive spirit. Engaging in competitive gaming titles, such as Valorant and League of Legends, I can provide an outlet for my strategic thinking and quick decision-making skills. Additionally, I find my calling in the swimming pool, where I am not only in competition with others but also with myself, constantly striving for improvement. Weightlifting serves as a metaphor for my approach to challenges - each lift a testament to the incremental progress that dedication and perseverance can bring. These hobbies not only keep me balanced but also infuse the same determination into every aspect of my life.</p>
+      </div>
+      <div class="about-portrait">
+        <div class="circular--portrait">
+          <img src="images\portrait_image.png" alt="Omar Mohamed Portrait">
+        </div>
+      </div>
+    </div>
+    <br>
+    <h3 class="favorite-games">Favorite Game Titles</h3>
+    <div class="logos">
+      <div class="logos-slide">
+        <img src="logos\LeagueofLegends.png" />
+        <img src="logos\Valorant.png" />
+        <img src="logos\TeamfightTactics.png" />
+        <img src="logos\Overwatch.png" />
+        <img src="logos\wow.webp" />
+        <img src="logos\minecraft.webp" />
+        <img src="logos\ESO.png" />
+        <img src="logos\CounterStrike.webp" />
+        <img src="logos\stardew.png" />
+      </div>
+    </div>
+    <br>
+  </div>
+
+<!-- Contacts -->
+  <button id="Contact" class="accordion">Contact</button>
+  <div class="panel">
+    <div class="contact-section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h1 class="connect">Let's Connect</h1>
+          <br>
+          <p class="email-section">
+            <span class="material-symbols-outlined">
+              mail
+            </span>
+            <span class="email">
+              <a href="mailto:omohamed5297@gmail.com">omohamed5297@gmail.com</a>
+            </span>
+          </p>
+          <br>
+          <p id="Socials" class="social-icons">
+            <a href="https://www.linkedin.com/in/omaremohamed/" target="_blank"><i class="fab fa-linkedin fa-xl"></i></a>
+            <a href="https://github.com/OmarMohamed543" target="_blank"><i class="fab fa-github fa-xl"></i></a>
+            <a href="https://twitter.com/_omohamed" target="_blank"><i class="fab fa-twitter fa-xl"></i></a>
+          </p>
+          <br>
+          <p class="resume">
+          <button>
+            <a href="https://drive.google.com/file/d/1TcbMcV8KVyIGwWJmL1CiLCaAVwR0rl6Z/view?usp=sharing" target="_blank" download="Mohamed_2023_Resume.pdf">Download Resume </a>
+          </button>
+          </p>
+        </div>
+        <div class="contact-form">
+          <form action="https://formspree.io/f/mjvqzkrv" method="POST">
+            <label>
+              <input type="name" placeholder="Your Name" name="name">
+            </label>
+            <label>
+              <input type="email" placeholder="Your Email" name="email">
+            </label>
+            <label>
+              <textarea name="message" placeholder="Your Message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    &#169; Omar Mohamed 2023
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/923eec8ed1.js" crossorigin="anonymous"></script>
+</body>
